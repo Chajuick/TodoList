@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="차주익" />
+    <meta name="description" content="TodoList" />
+    <meta name="keywords" content="html, css, javascript, ul, li" />
+    <meta name="copyright" content="차주익" />
+    <title>To DO List</title>
+    <link rel="stylesheet" href="./css.css" />
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div id="clock_sub"></div>
+            <div id="clock_main"></div>
+        </header>
+        <main>
+            <div id="list_container">
+                <div id="list_title">
+                    <h3>
+                        <iconify-icon icon="ep:list" width="40px" height="40px" ></iconify-icon>
+                        <span>TO DO LIST</span>
+                    </h3>
+                </div>
+                <div id="list_input">
+                    <input id="todo_list" type="text" maxlength="25" placeholder="할 일을 입력해주세요." onkeydown="handleEnter(event)"/>
+                    <button id="add_btn">추가하기</button>
+                </div>
+                <div id="list_content">
+                    <h2 id="list_controler">
+                        <div>
+                            <span>리스트 펼쳐보기</span>
+                            <span id="checked_num">0 /</span>
+                            <span id="list_num">0</span>
+                        </div>
+                        <span id="list_dropdown">▼</span>
+                    </h2>
+                    <ul id="dropdown_content" class="act"></ul>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <ul>
+                <li>ⓒ Copyright : 차주익</li>
+                <li>출처 Freepik<a href="https://kr.freepik.com/free-vector/flat-spring-background_22188652.htm#query=%EB%B4%84%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8&position=0&from_view=keyword&track=ais&uuid=da694aa0-1274-43af-8205-b95841cebe71">SPRING</a></li>
+                <li> <a href="https://kr.freepik.com/free-vector/hand-drawn-flat-summer-tropical-background_29462411.htm#query=%EC%97%AC%EB%A6%84%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8&position=31&from_view=search&track=ais&uuid=ebade434-d76e-4839-9140-159582836de2">SUMMER</a></li>
+                <li> <a href="https://kr.freepik.com/free-vector/autumn-background_16676841.htm#query=%EA%B0%80%EC%9D%84%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8&position=0&from_view=search&track=ais&uuid=cd22f3cc-f651-4bbf-9594-a848b3538c83">FALL</a></li>
+                <li> <a href="https://kr.freepik.com/free-vector/flat-winter-season-celebration-background_33137955.htm#query=%EA%B2%A8%EC%9A%B8%20%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8&position=22&from_view=search&track=ais&uuid=03f62e27-adbe-4b90-a212-9bdff55b50d0">WINTER</a></li>
+            </ul>
+        </footer>
+    </div>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="./javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'DIGI';
+    src: url('./font/DS-DIGI.TTF') format('truetype');
+}
+@font-face {
+    font-family: 'DIGIB';
+    src: url('./font/DS-DIGIB.TTF') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    width: 100vw;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    border-radius: 8px;
+    padding: 20px 40px;
+    top: 50px;
+    background-color: rgba(40, 40, 40, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: "DIGIB";
+}
+header div#clock_main {
+    font-size: 80px;
+}
+header div#clock_main span:first-child{
+    margin-right: 20px;
+}
+header div#clock_sub {
+    font-size: 20px;
+}
+
+main {
+    height: 700px;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+}
+main div#list_container {
+    background-color: rgb(250, 250, 250);
+    padding: 30px 40px;
+    border-radius: 1rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main div#list_container div#list_title h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+main div#list_container div#list_title h3 span {
+    margin-left: 10px;
+}
+main div#list_container div#list_input {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+main div#list_container div#list_input input {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    transition: all 400ms;
+}
+main div#list_container div#list_input input:focus {
+    outline: none;
+    box-shadow: 0 2px 3px yellowgreen;
+}
+main div#list_container div#list_input button {
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(40, 40, 40);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+    background-color: rgb(40, 40, 40);
+    color: rgb(250, 250, 250);
+    transition: all 400ms;
+}
+main div#list_container div#list_input button:hover {
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    background-color: rgb(80, 80, 80);
+    border: 1px solid rgb(80, 80, 80);
+    color: rgb(230, 230, 230);
+}
+main div#list_container div#list_input button:active {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+    background-color: rgb(250, 250, 250);
+    color: rgb(40, 40, 40);
+}
+main div#list_container div#list_content {
+    margin-top: 20px;
+    width: 400px;
+}
+main div#list_container div#list_content h2#list_controler{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 8px 8px 8px 8px;
+    padding: 10px 10px 10px 10px;
+    color: rgb(250, 250, 250);
+    transition: all 400ms;
+}
+main div#list_container div#list_content h2#list_controler.act{
+    border-radius: 8px 8px 0 0;
+}
+main div#list_container div#list_content h2#list_controler span#list_dropdown{
+    cursor: pointer;
+}
+main div#list_container div#list_content ul#dropdown_content{
+    list-style: none;
+    width: 100%;
+    border: 1px solid rgb(40, 40, 40);
+    border-top: none;
+    padding: 10px 10px 30px 10px;
+    max-height: 300px;
+    overflow-y: scroll;
+    transition: all 400ms;
+}
+main div#list_container div#list_content ul#dropdown_content.act{
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+main div#list_container div#list_content ul#dropdown_content li{
+    border-bottom: 1px solid rgb(180, 180, 180);
+    padding: 5px 0;
+    transition: all 400ms;
+    color: rgb(80, 80, 80);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main div#list_container div#list_content ul#dropdown_content li label:hover{
+    cursor: pointer;
+    color: rgb(120, 120, 120);
+}
+main div#list_container div#list_content ul#dropdown_content li label{
+    display: flex;
+    align-items: center;
+}
+main div#list_container div#list_content ul#dropdown_content li label span{
+    margin-left: 8px;
+}
+main div#list_container div#list_content ul#dropdown_content li label input{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgb(120, 120, 120);
+    transition: all 400ms;
+    position: relative;
+}
+main div#list_container div#list_content ul#dropdown_content li label input:hover{
+    cursor: pointer;
+    border: 1px solid rgb(180, 180, 180);
+}
+main div#list_container div#list_content ul#dropdown_content li label input:checked{
+    border: 1px solid rgb(232, 98, 90);
+    background-color: rgb(232, 98, 90);
+}
+input[type="checkbox"]:checked + span {
+    text-decoration: line-through; 
+    color: #888; 
+}
+
+input[type="checkbox"]:not(:checked) + span {
+    text-decoration: none; 
+    color: #333; 
+}
+main div#list_container div#list_content ul#dropdown_content li label input:checked:hover{
+    border: 1px solid rgb(232, 98, 90);
+    box-shadow: 0 0 1px rgb(255, 13, 0);
+}
+main div#list_container div#list_content ul#dropdown_content li label input::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(250, 250, 250);
+    top: 7px;
+    left: 1px;
+    transform: rotate(55deg);
+    width: 6px;
+    height: 0;
+    transition: all 150ms;
+}
+main div#list_container div#list_content ul#dropdown_content li label input::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(250, 250, 250);
+    top: 6px;
+    left: 3px;
+    transform: rotate(125deg);
+    width: 10px;
+    height: 0;
+    transition: all 150ms ease-in 150ms;
+}
+main div#list_container div#list_content ul#dropdown_content li label input:checked:after {
+    height: 2px;
+}
+main div#list_container div#list_content ul#dropdown_content li label input:checked::before {
+    height: 2px;
+}
+
+main div#list_container div#list_content ul#dropdown_content li button{
+    padding: 0 4px;
+    border-radius: 50%;
+    border: 1px solid rgb(232, 98, 90);
+    background-color: rgb(232, 98, 90);
+    color: rgb(250, 250, 250);
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 400ms;
+}
+main div#list_container div#list_content ul#dropdown_content li button:hover{
+    cursor: pointer;
+    background-color: rgb(252, 112, 105);
+    color: rgb(210, 210, 210);
+}
+main div#list_container div#list_content ul#dropdown_content li button:active{
+    cursor: pointer;
+    color: rgb(232, 98, 90);
+    background-color: rgb(250, 250, 250);
+}
+#checked_num {
+    font-size: 14px;
+    color: rgb(200, 200, 200);
+}
+#list_num {
+    font-size: 14px;
+    color: rgb(200, 200, 200);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 20px;
+}
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer ul li {
+    margin-left: 10px;
+}
+footer ul li a {
+    text-decoration: none;
+    color: rgb(40, 40, 40);
+}
