@@ -92,6 +92,7 @@ function addRemoveEvent(item) {
     item.addEventListener('click', () => {
         var parent = item.parentElement;
         parent.remove();
+        listCheckBox = document.querySelectorAll('.list_check');
         updateCount();
         saveToLocalStorage();
     });
@@ -163,7 +164,7 @@ function updateCount() {
     });
     checkedNum.innerText = `${checkCount} /`;
     listNum.innerText = `${listCheckBox.length}`;
-}
+};
 
 // 로컬 스토리지에 데이터 저장
 function saveToLocalStorage() {
